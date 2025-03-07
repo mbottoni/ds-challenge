@@ -1,0 +1,7 @@
+
+*.html
+*.csv
+*.json
+*.jsonl
+*.jsonl.gz
+*.pkl
