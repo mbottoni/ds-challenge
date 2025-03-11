@@ -2,7 +2,7 @@
 
 ## Short Summary of Key Findings
 
-### 1. Price Variation by Product
+### Price Variation by Product
 
 1.  **Gasoline**
     -   **Generally commands the highest average selling price** among
@@ -31,7 +31,7 @@ strategies**. Monitoring local supply, tax structures, and brand
 positioning is particularly critical for Gasoline and Diesel, where
 price variability is greater.
 
-### 2. Purchase Price Dynamics
+### Purchase Price Dynamics
 
 -   **Most purchase prices** lie between **1 BRL and 2.5 BRL**, with
     fewer extreme outliers compared to selling prices.\
@@ -48,7 +48,7 @@ compress or inflate margins in specific localities or time periods,
 indicating the need for **close supplier management** and possible
 renegotiation of contracts.
 
-### 3. Margin Analysis & Outliers
+### Margin Analysis & Outliers
 
 1.  **Typical Margins**:
     -   The **boxplots** often show **10--30%** as a common margin range
@@ -70,26 +70,26 @@ uncover hidden costs, inefficiencies, or strategic opportunities.
 Scrutinizing these transactions can reveal areas for **improved
 operational controls** or **competitive advantage** in targeted markets.
 
-### 4. Geographic & Market Concentration Insights
+### Geographic & Market Concentration Insights
 
-#### 4.1. State-Level Concentration (HHI Scores)
+#### State-Level Concentration (HHI Scores)
 
 -   **High HHI States (e.g., MA, MT, AM)**:
     -   Highly concentrated; fewer dominant players; higher potential
-        for **price premiums** but also **regulatory scrutiny**.
+        for **price premiums** 
 -   **Lower HHI States (e.g., DF, RS)**:
     -   More competitive; typically **lower average prices**, narrower
         margins due to **multiple strong competitors**.
 
-#### 4.2. Number of Establishments (n_estabelecimentos)
+#### Number of Establishments (n_estabelecimentos)
 
 -   **Highly Skewed**:
     -   Most observations under 50 establishments, but some
         municipalities exceed 1,000.\
     -   Large urban centers (or aggregated reporting) can distort
-        averages, so treating these areas separately in models is wise.
+        averages
 
-#### 4.3. Geographic Price Variation & Correlation
+#### Geographic Price Variation & Correlation
 
 -   **Remote vs. Urban**:
     -   **Remote or rural municipalities** often face higher
@@ -109,7 +109,7 @@ establishment density, and local taxation**---all play key roles in
 shaping price and margin. A **"one-size-fits-all"** approach to pricing
 will miss many nuances; **robust regional segmentation** is essential.
 
-### 5. Brand Coverage & Overlapping Networks
+### Brand Coverage & Overlapping Networks
 
 1.  **Universal State Presence**:
     -   Major brands (e.g., White Label, Blue Label, Green Label, Purple
@@ -131,12 +131,12 @@ will miss many nuances; **robust regional segmentation** is essential.
 **Implication:**\
 **Network-level** decisions---such as re-routing shipments,
 consolidating brands, or optimizing distribution points---can drive
-**significant cost savings** and help maintain price competitiveness.
+**cost savings** and help maintain price competitiveness.
 Overlapping footprints require careful management to **avoid
 cannibalization** (if brands are under one umbrella) or to **target
 competitor vulnerabilities** (if operating independently).
 
-### 6. Time-Series Trends & Volatility
+### Time-Series Trends & Volatility
 
 1.  **Long-Term Upward Trend**
     -   From **2004 to mid-2010s**, prices rose gradually, reflecting
@@ -157,7 +157,7 @@ competitor vulnerabilities** (if operating independently).
 (e.g., lower-price era vs. high-volatility era). Each phase or cluster
 calls for **different inventory, hedging, and pricing tactics**.
 
-### 7. Actionable Recommendations
+### Actionable Recommendations
 
 1.  **Pricing & Margin Management**
     -   **Dynamic Pricing**: In high-volatility contexts (post-2018),
@@ -209,9 +209,9 @@ calls for **different inventory, hedging, and pricing tactics**.
 - **Total Actual Profit**: \$493,765.82\
 - **Profit Prediction Error**: \$80,475.89 *(16.30%)*
 
-### 1. Model Performance & Forecast Quality
+### Model Performance & Forecast Quality
 
-#### Balancing Optimism and Caution
+#### Analysis of the forecast
 
 -   **Conservative Forecasts**: The model tends to **underestimate**
     actual values. This can serve as a **built‐in safety margin**,
@@ -219,23 +219,8 @@ calls for **different inventory, hedging, and pricing tactics**.
     or inventory are tight.\
 -   **Risk of Missed Upside**: Underestimating \~75% of the time
     suggests we might leave money on the table in strong markets.
-    Addressing this bias could unlock **additional profit
-    opportunities**.
 
-#### Interpreting the Metrics
-
--   **Negative R²**: At **-0.2517**, the model underperforms a simple
-    average baseline on this particular test set. This underscores the
-    **complexity of the data** and signals significant room to improve
-    feature engineering or hyperparameter tuning.\
--   **RMSE of 1.0275**: In a revenue/profit context, this level of
-    error---though not trivial---may still be **actionable** for broad
-    strategic decisions.\
--   **Prediction Errors (\~16%)**: While the absolute deviations are
-    notable, they provide a **starting point** for further optimization.
-    The model can be incrementally refined to reduce these gaps.
-
-### 2. Financial Impact Analysis
+###  Financial Impact Analysis
 
 #### Revenue & Profit
 
@@ -255,7 +240,7 @@ calls for **different inventory, hedging, and pricing tactics**.
     undershooting forecasts may result in **stockouts** or **inadequate
     staffing**, limiting revenue capture.
 
-### 3. Business Implications
+### Business Implications
 
 1.  **Underestimation Bias**
     -   **Safe Inventory Approach**: Because the model undershoots,
@@ -274,7 +259,7 @@ calls for **different inventory, hedging, and pricing tactics**.
         real‐time market signals or rapid re‐forecasting methods to
         **capture upswings** more effectively.
 
-### 4. Recommendations & Next Steps
+###  Recommendations & Next Steps
 
 1.  **Refine the Model**
     -   **Feature Expansion**: Incorporate macroeconomic variables,
@@ -306,61 +291,19 @@ calls for **different inventory, hedging, and pricing tactics**.
         certain inputs (price, demand, cost) might yield different
         outputs---and plan your supply chain or marketing campaigns
         accordingly.
-
-## In Summary
-
-Despite the model's current tendency to **underpredict** revenue and
-profit by around 16%, these forecasts provide a **solid conservative
-baseline**. From a **risk management** perspective, underestimation can
-shield you from **overcommitting resources**, but it also risks
-**missing out on potential gains** in a vibrant market.
-
-By iterating on feature sets, refining hyperparameters, and monitoring
-real‐time performance, you can **gradually close the gap** between
-predicted and actual outcomes---striking a **better balance** between
-**risk aversion** and **growth potential**. The key is to **leverage the
-model as a starting point** for budgetary discipline while
-**complementing** its forecasts with **flexible, data‐driven
-adjustments** to seize emerging opportunities.
-
-## Possible next Steps
-
-### 1. Model Improvements
-
-1.  **Try Additional Algorithms**: Use **AutoML** (e.g., H2O.ai,
+5.  **Try Additional Algorithms**: Use **AutoML** (e.g., H2O.ai,
     auto-sklearn) to quickly evaluate new models (LightGBM, CatBoost)
     and tune hyperparameters more effectively.\
-2.  **Advanced Approaches**: Test **Bayesian models** or **Prophet** for
+6.  **Advanced Approaches**: Test **Bayesian models** or **Prophet** for
     time‐series behavior.\
-3.  **Feature Selection**: Apply **RFE** or SHAP to prioritize the most
+7.  **Feature Selection**: Apply **RFE** or SHAP to prioritize the most
     impactful features.\
-4.  **Expand Hyperparameter Search**: Move beyond simple grids; consider
+8.  **Expand Hyperparameter Search**: Move beyond simple grids; consider
     Bayesian optimization for better results.
-
-### 2. Experiment Tracking & Deployment
-
-1.  **MLflow**: Track experiments, metrics, and parameters for
+9.  **MLflow**: Track experiments, metrics, and parameters for
     reproducibility.\
-2.  **Dockerize & Deploy**: Package the model in a Docker container for
+10.  **Dockerize & Deploy**: Package the model in a Docker container for
     consistent, scalable production use.\
-3.  **CI/CD**: Automate testing, building, and deployment of the Docker
+11.  **CI/CD**: Automate testing, building, and deployment of the Docker
     image.
 
-### 3. Risk Section
-
-1.  **Underestimation Bias**
-    -   **Risk**: Missing out on revenue during demand spikes.\
-    -   **Mitigation**: Include real‐time indicators and retrain often.
-2.  **Data Gaps & Quality**
-    -   **Risk**: Key features may be absent or incomplete.\
-    -   **Mitigation**: Expand data sources; ensure continuous quality
-        checks.
-3.  **Overfitting**
-    -   **Risk**: Model performs poorly with big market shifts.\
-    -   **Mitigation**: Rolling retrains, scenario testing.
-4.  **Computational Complexity**
-    -   **Risk**: Long runtimes with extensive hyperparameter searches.\
-    -   **Mitigation**: Use cloud resources, set cost/time limits.
-5.  **Interpretability vs. Accuracy**
-    -   **Risk**: Complex models are harder to explain.\
-    -   **Mitigation**: Use explainable AI tools (SHAP, LIME).
